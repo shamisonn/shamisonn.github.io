@@ -1,0 +1,20 @@
+---
+---
+@import "https://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.3/normalize.min.css";
+@import "http://fonts.googleapis.com/earlyaccess/notosansjapanese";
+@import "http://fonts.googleapis.com/css?family=Inconsolata";
+
+h1, h2, h3, p, td, li{
+  font-family: Noto Sans Japanese;
+}
+
+
+body {
+  width: 900px;
+  padding: 20px 50px;
+
+  code {
+    font-family: 'Inconsolata', monospace; 
+  }
+
+}
