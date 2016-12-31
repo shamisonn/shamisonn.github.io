@@ -12,10 +12,6 @@ Name is shamison.
 - Programming.
 - Linux dist, Unix System.
 
-## Slides...
-
-- [Slides](/slides)
-
 ## I like to...
 
 - watch Anime Movies.
