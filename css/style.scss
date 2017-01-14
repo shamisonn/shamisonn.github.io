@@ -4,18 +4,21 @@
 @import "https://fonts.googleapis.com/css?family=Libre+Baskerville";
 @import "https://fonts.googleapis.com/css?family=Stardos+Stencil";
 
+html {
+  max-width: 800px;
+}
+
 h1, h2, h3 {
   font-family: Stardos Stencil;
-
 }
 
 p, td, li {
   font-family: Libre Baskerville;
-
 }
 
 body {
-  padding: 0 50px;
+  width: 85%;
+  margin: 0 50px;
 }
 
 .icon {
