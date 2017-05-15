@@ -1,4 +1,4 @@
-exclude: [ new_post.sh ]
+exclude: [ write.sh ]
 
 future: true
 markdown: kramdown
