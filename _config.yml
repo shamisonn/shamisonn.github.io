@@ -1,1 +1,2 @@
 future: true
+exclude: [ new_post.sh ]
