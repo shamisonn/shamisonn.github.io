@@ -4,23 +4,17 @@
 @import "http://fonts.googleapis.com/earlyaccess/notosansjapanese";
 @import "http://fonts.googleapis.com/css?family=Inconsolata";
 
-html {
-  max-width: 800px;
-}
-h1, h2, h3 {
-  font-family: Noto Sans Japanese;  
-}
-p, td, li {
-  font-family: Noto Sans Japanese;
-}
-
-
 body {
+	max-width: 800px;
+	font-family: Noto Sans Japanese;  
   width: 85%;
-  margin: 0 50px;
+  margin: 10px 30px 50px;
 
   code {
     font-family: 'Inconsolata', monospace; 
   }
+}
 
+img {
+  max-width: 100%;
 }
