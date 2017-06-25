@@ -34,7 +34,7 @@ writepost() {
             # yes ならば 新しいファイルを作る
             #     file名は diary.md, diary-1.md, diary-2.md, ... と値が増える 
             [Yy] | [Yy][Ee][Ss] ) ;;
-            # no ならば COUNTSを減らして最新のファイルを指すようにする
+            # no ならば終了
             * ) exit 0;; 
         esac
         TITLE=${TITLE}-${COUNTS}
