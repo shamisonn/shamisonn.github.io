@@ -35,3 +35,70 @@ At next, I had Hot pot(火鍋) with my teacher.
 Hot pot looks Fire. I had fire.
 
 After I get hotel, My body is burnnig🔥🔥🔥.
+
+At night,
+we were invited to dinner by my teacher.
+His friend sets GORGEOUS dinner.
+
+His friend says "This restaurant serves the best Sichuan food(四川料理) in Chengdu restaurant".
+
+So we had foods of best of quality in this trip!
+AT FIRST DAY!!!
+
+At the honest,
+I satisfied in this trip, because I was not interested in some landmarks...
+
+## 3日目
+
+ここで英語縛りを解禁したので日本語で書く。
+
+今日は一日自由の日だからとりあえず
+2日目よりうまい飯を食べに地下鉄経由でレストランへ。
+
+麻婆豆腐が有名のところに行った。
+
+![]()
+
+2日目も思ったけど中国の料理は油がうまい。
+ごま油もうまいし、ラー油もうまい。
+油ギトギトだから胃が持たれそうって思ってたけど思いの外さっぱりしてるし、
+いっそレンゲで掬って飲めるレベル。
+これはガチ。
+
+あと辛さがペラくない。深い。
+主に山椒・花椒のおかげかと考えられる。
+香りから舌のしびれも丁度いい。
+
+だからって訳ではないが、
+個人としてもうちょっと唐辛子の辛味は少なくても良かったかなって思った。
+最早好みの問題だけどサ。
+
+なんと2日目はレストランに行っただけ。
+でも正直うまい飯を食いに来たのがメインみたいなところがあるので
+これでいいのだ〜。
+
+# 4日目
+
+今日は寛窄巷ってとこにいってきた。
+横に広いショッピングモールって感じでお祭りの感じがめっちゃあった。
+
+山椒と唐辛子を振った牛肉串がメチャウマ！
+あと、甘い謎の餅っぽい丸いやつもうまかった。
+(画像なし)
+
+午後から行ったけど、
+正直見るとこなくてすぐホテルに帰ってきちゃったぞい。
+
+インドア派だからホテルが安心するし、
+正直めっちゃ日本帰りたいというお気持ちが沸いた。
+
+日本語使えるって偉大やなぁって思ったし、
+せめて英語で雑談ができるようにならないと
+海外で働けないなって思った。(メンタル的に。)
+
+かえってラーメン食べたい。
+
+# 5日目
+
+帰国するだけ。
+帰りは直行便で帰るから楽ちんだぁ。
