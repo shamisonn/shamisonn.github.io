@@ -1,6 +1,7 @@
 ---
-layout: post
+layout: default
 title: コンベクションオーブンを買った。
+mode: post
 ---
 
 「siroca crossline ノンフライオーブン レッド SCO-501RD」を買った。

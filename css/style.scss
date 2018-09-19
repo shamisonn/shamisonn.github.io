@@ -3,27 +3,77 @@
 @import "https://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.3/normalize.min.css";
 @import "https://fonts.googleapis.com/css?family=Libre+Baskerville";
 @import "https://fonts.googleapis.com/css?family=Stardos+Stencil";
-
-html {
-  max-width: 800px;
-}
-
-h1, h2, h3 {
-  font-family: Stardos Stencil;
-}
-
-p, td, li {
-  font-family: Libre Baskerville;
-}
+@import "https://fonts.googleapis.com/css?family=Inconsolata";
+@import "https://fonts.googleapis.com/earlyaccess/notosansjapanese";
 
 body {
-  width: 85%;
-  margin: 0 50px;
+  margin: 10px 30px 50px;
 }
 
-.icon {
-  overflow: hidden;
-  width: 200px;
-  height: 200px;
-  position: relative;
+.header {
+    font-family: Stardos Stencil;
+    height: 120px;
+    .title {
+	a {
+	    text-decoration: none;
+	    color: black;
+	}
+	font-size: 2.0rem;
+	margin: 0;
+	padding-top: 20px;
+    }
+    .subtitle {
+	font-size: 1.0rem;
+	margin: 0;
+	padding-bottom: 20px;
+    }
+    .subtitle:after {
+	content: "----- ----- ----- ----- ----- ----- ----- ----- ----- -----";
+	display: block;
+    }
 }
+
+.index {
+    .title {
+	margin: 0;
+    }
+    h1, h2, h3 {
+	font-family: Stardos Stencil;
+    }
+    h4, h5, p, li {
+	font-family: Libre Baskerville;
+    }
+    .icon {
+	overflow: hidden;
+	width: 300px;
+	height: 300px;
+	position: relative;
+    }
+}
+
+.post {
+    font-family: Noto Sans Japanese;
+    .title {
+	margin: 0;
+    }
+    code {
+	font-family: 'Inconsolata', monospace;	
+    }
+    img {
+	max-width: 100%;
+    }
+}
+
+
+.footer {
+    font-family:  Stardos Stencil;
+    p {
+	margin: 0;	
+    }
+}
+
+.footer:before {
+    content: "----- ----- ----- ----- ----- ----- ----- ----- ----- -----";
+    display: block;
+}
+

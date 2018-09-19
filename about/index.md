@@ -1,6 +1,7 @@
 ---
 layout: default
 title: About me;
+mode: index
 ---
 
 I'm lazy Japanese.

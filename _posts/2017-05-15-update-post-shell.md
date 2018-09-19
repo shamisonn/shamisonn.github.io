@@ -1,6 +1,7 @@
 ---
-layout: post
+layout: default
 title: jekyll用のpost用のスクリプトのアプデ
+mode: post
 ---
 
 色々いじって色々変えた。

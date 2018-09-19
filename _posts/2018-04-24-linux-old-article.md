@@ -1,6 +1,7 @@
 ---
-layout: post
+layout: default
 title: 過去に書いたlinuxのススメ
+mode: post
 ---
 
 執筆時は2016年4月で、学内用に書いたやつをここに載っけるアレ

@@ -1,0 +1,55 @@
+@import "https://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.3/normalize.min.css";
+@import "https://fonts.googleapis.com/css?family=Libre+Baskerville";
+@import "https://fonts.googleapis.com/css?family=Stardos+Stencil";
+@import "https://fonts.googleapis.com/css?family=Inconsolata";
+@import "https://fonts.googleapis.com/earlyaccess/notosansjapanese";
+body {
+  margin: 10px 30px 50px; }
+
+.header {
+  font-family: Stardos Stencil;
+  height: 120px; }
+  .header .title {
+    font-size: 2.0rem;
+    margin: 0;
+    padding-top: 20px; }
+    .header .title a {
+      text-decoration: none;
+      color: black; }
+  .header .subtitle {
+    font-size: 1.0rem;
+    margin: 0;
+    padding-bottom: 20px; }
+  .header .subtitle:after {
+    content: "----- ----- ----- ----- ----- ----- ----- ----- ----- -----";
+    display: block; }
+
+.index .title {
+  margin: 0; }
+.index h1, .index h2, .index h3 {
+  font-family: Stardos Stencil; }
+.index h4, .index h5, .index p, .index li {
+  font-family: Libre Baskerville; }
+.index .icon {
+  overflow: hidden;
+  width: 300px;
+  height: 300px;
+  position: relative; }
+
+.post {
+  font-family: Noto Sans Japanese; }
+  .post .title {
+    margin: 0; }
+  .post code {
+    font-family: 'Inconsolata', monospace; }
+  .post img {
+    max-width: 100%; }
+
+.footer {
+  font-family: Stardos Stencil; }
+  .footer p {
+    margin: 0; }
+
+.footer:before {
+  content: "----- ----- ----- ----- ----- ----- ----- ----- ----- -----";
+  display: block; }
