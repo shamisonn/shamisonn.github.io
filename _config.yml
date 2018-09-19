@@ -1,6 +1,6 @@
 exclude: [ write.sh ]
 
-baseurl: https://shamisonn.github.io
+baseurl: "https://shamisonn.github.io"
 future: true
 markdown: kramdown
 highlighter: rouge
