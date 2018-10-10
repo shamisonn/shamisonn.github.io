@@ -44,7 +44,7 @@ writepost() {
                "---" > ${POSTPATH}        
     fi
     # 最新のファイルを開く
-    vim ${POSTPATH}
+    emacs ${POSTPATH}
     printf "\e[32m#\e[m Opened, ${POSTPATH}\n"
 }
 
