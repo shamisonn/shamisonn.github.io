@@ -1,5 +1,6 @@
 ---
-layout: post
+layout: default
+mode: post
 title: このブログについて書いておこうと思う。
 ---
 
