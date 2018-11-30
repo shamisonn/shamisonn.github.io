@@ -1,5 +1,5 @@
 ---
----
+--- 
 @import "https://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.3/normalize.min.css";
 @import "https://fonts.googleapis.com/css?family=Libre+Baskerville";
 @import "https://fonts.googleapis.com/css?family=Stardos+Stencil";
@@ -7,73 +7,106 @@
 @import "https://fonts.googleapis.com/earlyaccess/notosansjapanese";
 
 body {
-  margin: 10px 30px 50px;
+    margin: 10px 30px 50px;
 }
 
 .header {
     font-family: Stardos Stencil;
     height: 120px;
+
     .title {
-	a {
-	    text-decoration: none;
-	    color: black;
-	}
-	font-size: 2.0rem;
-	margin: 0;
-	padding-top: 20px;
+        a {
+            text-decoration: none;
+            color: black;
+        }
+
+        font-size: 2.0rem;
+        margin: 0;
+        padding-top: 20px;
     }
+
     .subtitle {
-	font-size: 1.0rem;
-	margin: 0;
-	padding-bottom: 20px;
+        font-size: 1.0rem;
+        margin: 0;
     }
+
     .subtitle:after {
-	content: "----- ----- ----- ----- ----- ----- ----- ----- ----- -----";
-	display: block;
+        padding-top: 7px;
+        border-bottom: 1px dashed black;
+        content: "";
+        display: block;
     }
 }
 
 .index {
     .title {
-	margin: 0;
+        margin: 0;
     }
-    h1, h2, h3 {
-	font-family: Stardos Stencil;
+
+    h1,
+    h2,
+    h3 {
+        font-family: Stardos Stencil;
     }
-    h4, h5, p, li {
-	font-family: Libre Baskerville;
+
+    h4,
+    h5,
+    p,
+    li {
+        font-family: Libre Baskerville;
     }
+
     .icon {
-	overflow: hidden;
-	width: 300px;
-	height: 300px;
-	position: relative;
+        overflow: hidden;
+        width: 300px;
+        height: 300px;
+        position: relative;
     }
 }
 
 .post {
     font-family: Noto Sans Japanese;
+    
+    h1 {
+        font-size: 1.5rem;
+        border-bottom: 3px double black;
+    }
+    
+    h2 {
+        font-size: 1.3rem;
+        border-bottom: 1px solid black;
+    }
+
+    h3 {
+        font-size: 1.1rem;
+        border-bottom: 1px dotted black;
+    }
+    
     .title {
-	margin: 0;
+        margin: 0;
     }
+
     code {
-	font-family: 'Inconsolata', monospace;	
+        font-family: 'Inconsolata', monospace;
     }
+
+    pre {
+        position: relative;
+        padding: 10px 20px;
+        border: solid 2px black;
+    }
+
     img {
-	max-width: 100%;
-    }
-}
-
-
-.footer {
-    font-family:  Stardos Stencil;
-    p {
-	margin: 0;	
+        max-width: 100%;
     }
 }
 
 .footer:before {
-    content: "----- ----- ----- ----- ----- ----- ----- ----- ----- -----";
+    border-bottom: 1px dashed black;
+    content: "";
     display: block;
 }
 
+.footer {
+    font-family: Stardos Stencil;
+}
