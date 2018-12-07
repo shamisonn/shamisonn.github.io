@@ -4,7 +4,7 @@ mode: post
 title: タブーサーチの話
 ---
 
-<script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+<script async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS_HTML&locale=ja"></script>
 
 この記事は [PMOB Advent Calendar 2018 - Adventar](https://adventar.org/calendars/3478#list-2018-12-06){:target="_blank"} 7日目の記事です。
 
