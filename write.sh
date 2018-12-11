@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 writepost() {
     TITLE="diary"
@@ -39,12 +39,13 @@ writepost() {
     if [ ! -f ${POSTPATH} ]; then
         printf "%s\n%s\n%s\n%s\n" \
                "---" \
-               "layout: post" \
+               "layout: default" \
                "title: たいとる" \
+	       "mode: post" \
                "---" > ${POSTPATH}        
     fi
     # 最新のファイルを開く
-    emacs ${POSTPATH}
+    code ${POSTPATH}
     printf "\e[32m#\e[m Opened, ${POSTPATH}\n"
 }
 

@@ -1,0 +1,29 @@
+---
+layout: default
+title: jekyll用のpost用のスクリプトを書いた
+mode: post
+---
+
+誰でも書けるコードだけど、
+このスクリプトでおれは沢山のブログを量産するんだ俺はやるぞ。
+
+<script src="https://gist.github.com/shamisonn/243075a564c4b3bb9b8e291cf95fe069.js"></script>
+
+```shell
+./makepost.sh
+```
+
+で`_post/YYYY-mm-dd-diary.md`が作られて
+
+```shell
+./makepost.sh hoge
+```
+
+で`_post/YYYY-mm-dd-hoge.md`が作られる。
+
+jekyllが既にpostを作るコマンドを用意していたらオシエテクダサイ。
+
+
+
+
+
