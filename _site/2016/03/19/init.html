@@ -3,11 +3,9 @@
 
 <head>
   <meta charset="UTF-8">
-  {% if page.title == null %}
-  <title>shamisonn.github.io;</title>
-  {% else %}
-  <title>shamisonn.github.io; | {{ page.title }}</title>  
-  {% endif %}
+  
+  <title>shamisonn.github.io; | gh-pageでカキカキ</title>  
+  
   <link href="/css/style.css" rel="stylesheet">
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <!-- Global site tag (gtag.js) - Google Analytics -->
@@ -28,9 +26,11 @@
       The Personal Pages | <a href="/">index</a> | <a href="/about">about</a> | <a href="/posts">posts</a>
     </p>
   </header>
-  <main class="{{ page.mode }}">
-    <h1 class="title">{{ page.title }}</h1>
-    {{ content }}
+  <main class="post">
+    <h1 class="title">gh-pageでカキカキ</h1>
+    <p>Jekyllハジメマシタヨ．</p>
+
+
   </main>
   <footer class="footer">
     <p>(C) 2018 shamison</p>

@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  
+  <title>shamisonn.github.io; | jekyll用のpost用のスクリプトのアプデ</title>  
+  
+  <link href="/css/style.css" rel="stylesheet">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-130792681-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-130792681-1');
+  </script>
+</head>
+
+<body>
+  <header class="header">
+    <h1 class="title">shamisonn.github.io;</h1>
+    <p class="subtitle">
+      The Personal Pages | <a href="/">index</a> | <a href="/about">about</a> | <a href="/posts">posts</a>
+    </p>
+  </header>
+  <main class="post">
+    <h1 class="title">jekyll用のpost用のスクリプトのアプデ</h1>
+    <p>色々いじって色々変えた。</p>
+
+<p>特にファイル名を<code class="highlighter-rouge">makepost.sh</code>から<code class="highlighter-rouge">write.sh</code>に変えたのは大きい。(モチベ的に)</p>
+
+<div class="language-shell highlighter-rouge"><pre class="highlight"><code><span class="c">#!/bin/sh</span>
+
+writepost<span class="o">()</span> <span class="o">{</span>
+    <span class="nv">TITLE</span><span class="o">=</span><span class="s2">"diary"</span>
+    <span class="k">if</span> <span class="o">[</span> <span class="nv">$# </span>-gt 0 <span class="o">]</span>; <span class="k">then
+        </span><span class="nv">TITLE</span><span class="o">=</span><span class="nv">$1</span>        
+    <span class="k">else
+        </span><span class="nb">printf</span> <span class="s2">"</span><span class="se">\e</span><span class="s2">[32m#</span><span class="se">\e</span><span class="s2">[m Input Title(default 'diary'): "</span>
+        <span class="nb">read </span>INPUT
+        <span class="k">if</span> <span class="o">[</span> <span class="k">${#</span><span class="nv">INPUT</span><span class="k">}</span> -gt 0 <span class="o">]</span>; <span class="k">then
+            </span><span class="nv">TITLE</span><span class="o">=</span><span class="k">${</span><span class="nv">INPUT</span><span class="k">}</span>
+        <span class="k">fi        
+    fi    
+    </span><span class="nv">DATE</span><span class="o">=</span><span class="sb">`</span>date <span class="s1">'+%Y-%m-%d'</span><span class="sb">`</span>
+    <span class="c"># 既に${DATE}-${TITLE}.mdが存在するなら</span>
+    <span class="k">if</span> <span class="o">[</span> -e <span class="s2">"_posts/</span><span class="k">${</span><span class="nv">DATE</span><span class="k">}</span><span class="s2">-</span><span class="k">${</span><span class="nv">TITLE</span><span class="k">}</span><span class="s2">.md"</span> <span class="o">]</span>; <span class="k">then       
+        </span><span class="nv">COUNTS</span><span class="o">=</span><span class="sb">`</span>ls -U1  _posts/ | grep <span class="k">${</span><span class="nv">DATE</span><span class="k">}</span>-<span class="k">${</span><span class="nv">TITLE</span><span class="k">}</span> | wc -l | tr -d <span class="s1">' '</span><span class="sb">`</span>
+        <span class="c"># ${DATE}-${TITLE}-${同名のファイル数}.mdを作るか聞く</span>
+        <span class="nb">printf</span> <span class="s2">"</span><span class="se">\e</span><span class="s2">[32m#</span><span class="se">\e</span><span class="s2">[m Same md files already exits</span><span class="se">\n</span><span class="s2">"</span>
+        <span class="nb">printf</span> <span class="s2">"</span><span class="se">\e</span><span class="s2">[32m#</span><span class="se">\e</span><span class="s2">[m Do you wanna write the new file, "</span>
+        <span class="nb">printf</span> <span class="s2">"</span><span class="se">\e</span><span class="s2">[31m</span><span class="k">${</span><span class="nv">TITLE</span><span class="k">}</span><span class="s2">-</span><span class="k">${</span><span class="nv">COUNTS</span><span class="k">}</span><span class="s2">.md</span><span class="se">\e</span><span class="s2">[m ? (y/n): "</span>
+        <span class="nb">read </span>ans
+        <span class="k">case</span> <span class="nv">$ans</span> <span class="k">in</span>
+            <span class="c"># yes ならば 新しいファイルを作る</span>
+            <span class="c">#     file名は diary.md, diary-1.md, diary-2.md, ... と値が増える </span>
+            <span class="o">[</span>Yy] <span class="p">|</span> <span class="o">[</span>Yy][Ee][Ss] <span class="p">)</span> <span class="p">;;</span>
+            <span class="c"># no ならば終了</span>
+            <span class="k">*</span> <span class="p">)</span> <span class="nb">exit </span>0;; 
+        <span class="k">esac
+        </span><span class="nv">TITLE</span><span class="o">=</span><span class="k">${</span><span class="nv">TITLE</span><span class="k">}</span>-<span class="k">${</span><span class="nv">COUNTS</span><span class="k">}</span>
+    <span class="k">fi
+    </span><span class="nv">POSTPATH</span><span class="o">=</span><span class="s2">"_posts/</span><span class="k">${</span><span class="nv">DATE</span><span class="k">}</span><span class="s2">-</span><span class="k">${</span><span class="nv">TITLE</span><span class="k">}</span><span class="s2">.md"</span>
+    <span class="nb">printf</span> <span class="s2">"</span><span class="se">\e</span><span class="s2">[32m#</span><span class="se">\e</span><span class="s2">[m Do you wanna write the post, </span><span class="se">\e</span><span class="s2">[32m</span><span class="k">${</span><span class="nv">POSTPATH</span><span class="k">}</span><span class="se">\e</span><span class="s2">[m ? (y/n): "</span>
+    <span class="nb">read </span>ans
+    <span class="k">case</span> <span class="nv">$ans</span> <span class="k">in</span>
+        <span class="o">[</span>Yy] <span class="p">|</span> <span class="o">[</span>Yy][Ee][Ss] <span class="p">)</span> <span class="p">;;</span>
+        <span class="k">*</span> <span class="p">)</span> <span class="nb">exit </span>0;;
+    <span class="k">esac</span>
+    <span class="c"># もしファイルがないときは作成   </span>
+    <span class="k">if</span> <span class="o">[</span> ! -f <span class="k">${</span><span class="nv">POSTPATH</span><span class="k">}</span> <span class="o">]</span>; <span class="k">then
+        </span><span class="nb">printf</span> <span class="s2">"%s</span><span class="se">\n</span><span class="s2">%s</span><span class="se">\n</span><span class="s2">%s</span><span class="se">\n</span><span class="s2">%s</span><span class="se">\n</span><span class="s2">"</span> <span class="se">\</span>
+               <span class="s2">"---"</span> <span class="se">\</span>
+               <span class="s2">"layout: post"</span> <span class="se">\</span>
+               <span class="s2">"title: たいとる"</span> <span class="se">\</span>
+               <span class="s2">"---"</span> &gt; <span class="k">${</span><span class="nv">POSTPATH</span><span class="k">}</span>        
+    <span class="k">fi</span>
+    <span class="c"># 最新のファイルを開く</span>
+    emacs -nw <span class="k">${</span><span class="nv">POSTPATH</span><span class="k">}</span>
+    <span class="nb">printf</span> <span class="s2">"</span><span class="se">\e</span><span class="s2">[32m#</span><span class="se">\e</span><span class="s2">[m Opened, </span><span class="k">${</span><span class="nv">POSTPATH</span><span class="k">}</span><span class="se">\n</span><span class="s2">"</span>
+<span class="o">}</span>
+
+writepost <span class="nv">$1</span>
+</code></pre>
+</div>
+
+<h1 id="大変だったこと">大変だったこと</h1>
+
+<ul>
+  <li>比較演算子の-eqとか-neとか-gtとかの仕様把握</li>
+  <li>色付け(<code class="highlighter-rouge">echo "\e[32mhoge\e[m</code> とかやってみてくれ)</li>
+  <li>同名ファイル重複時の仕様設計と動作の実装
+    <ul>
+      <li><code class="highlighter-rouge">file</code>.mdがあるときは<code class="highlighter-rouge">file-1</code>.mdを作成
+        <ul>
+          <li><code class="highlighter-rouge">file-1</code>.mdがあるときは<code class="highlighter-rouge">file-2</code>.mdを作成</li>
+          <li><code class="highlighter-rouge">file-(n)</code>.mdがあるときは<code class="highlighter-rouge">file-(n+1)</code>.mdを作成</li>
+          <li>のようにした</li>
+        </ul>
+      </li>
+      <li>結構めんどくてここに一番時間をかけた
+        <ul>
+          <li>その割には一番使わなそうな機能である ;D</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li><code class="highlighter-rouge">echo -e</code>がbashとかじゃないと使えないからprintfに置き換え
+    <ul>
+      <li>そしたら謎エラー発生</li>
+      <li><code class="highlighter-rouge">printf "--"</code>をするとわかる
+        <ul>
+          <li>解決: <a href="https://unix.stackexchange.com/questions/22764/dashes-in-printf/22765">bash - Dashes in printf - Unix &amp; Linux Stack Exchange</a></li>
+          <li>ダブルクフォートで囲ってもダメなんですか。。。ワカンナイよ。。。</li>
+          <li>2番目の回答を参考にfix</li>
+          <li>結構綺麗にかけて満足</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>yes or no の部分の作成
+    <ul>
+      <li>色々悩んで結局コピった</li>
+      <li>caseでやったけどこれifでもいいんじゃないか？(とか思いつつも放置</li>
+    </ul>
+  </li>
+</ul>
+
+<h1 id="まとめ">まとめ</h1>
+
+<p>色々機能足したけどちょっとビミョーだけど自己満的にはOK。</p>
+
+<p>Emacsで管理できれば最高なんじゃないか？って気がしてきたけど、</p>
+
+<p>とりあえず構想だけ頭に置いといて、</p>
+
+<p>とりあえずあとでいいやって思った。</p>
+
+<p>とりあえずこれでEnd。</p>
+
+
+  </main>
+  <footer class="footer">
+    <p>(C) 2018 shamison</p>
+  </footer>
+</body>
+
+</html>
