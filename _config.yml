@@ -4,4 +4,4 @@ baseurl: "https://shamisonn.github.io"
 future: true
 markdown: kramdown
 highlighter: rouge
-
+excerpt_separator: <!more>
