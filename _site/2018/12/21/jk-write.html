@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  
+  <title>shamisonn.github.io; | Jekyllの補助ツールを作った話</title>  
+  
+  <link href="/css/style.css" rel="stylesheet">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-130792681-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-130792681-1');
+  </script>
+</head>
+
+<body>
+  <header class="header">
+    <h1 class="title">shamisonn.github.io;</h1>
+    <p class="subtitle">
+      The Personal Pages | <a href="/">index</a> | <a href="/about">about</a> | <a href="/posts">posts</a>
+    </p>
+  </header>
+  <main class="post">
+    <h1 class="title">Jekyllの補助ツールを作った話</h1>
+    <p>この記事は <a href="https://adventar.org/calendars/3478">PMOB Advent Calendar 2018 - Adventar</a> 12日目の記事です。
+もう21日ですが…。</p>
+
+<p>つくったやつ: <a href="https://github.com/shamisonn/jk-write">https://github.com/shamisonn/jk-write</a></p>
+
+<!--readmore-->
+
+<h1 id="golangでcliツールを作る">golangでcliツールを作る。</h1>
+
+<p>githubのREADMEに作ったツールについてはめっちゃ書いたから、それみて。
+こっちにはどうやって作ったかを書きたいと思ってたけど日記になりました。あぁ…。</p>
+
+<p>READMEにも書いたけど、ほとんど<a href="https://github.com/motemen/ghq">motemen/ghq</a>のパクリです。
+なぜかって言うとめっちゃ<code class="highlighter-rouge">fzf</code>と合わせて使いたいってのがあったからですね。
+詳しくは「ghq fzf」でググれば大体わかると思われますぞ。</p>
+
+<p>つまりどうやって作ったかというと、</p>
+
+<ul>
+  <li><a href="https://github.com/urfave/cli">urfave/cli</a></li>
+</ul>
+
+<p>を使ったということですね。</p>
+
+<p>実は今回作ったツールは<code class="highlighter-rouge">cp</code>とか<code class="highlighter-rouge">ls</code>をやるだけのものです。
+もともとshellで自作してあったのをgoで書き直しただけなので、
+難しい処理はまったくないんですね。
+つまり、そう、<code class="highlighter-rouge">urfave/cli</code>を使ってみました、ってだけなんですね。
+めっちゃ脳死。あ〜〜〜。</p>
+
+<p>すげぇ簡単にかけたのでおすすめです。
+使い方はREADMEみて。</p>
+
+<h1 id="雑記">雑記</h1>
+
+<p>ttyrec(+ ttygif)つかったらゴミみたいなgifできちゃったけど
+どうすればよかったんでしょうね。
+たぶん黒背景白文字とか設定すればよかったんでしょうね。
+hai。</p>
+
+
+  </main>
+  <footer class="footer">
+    <p>(C) 2018 shamison</p>
+  </footer>
+</body>
+
+</html>

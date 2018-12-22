@@ -6,8 +6,12 @@ mode: post
 <ul>
   {% for post in site.posts %}
   <li>
-    <a href="{{ post.url }}">{{ post.title }} : ({{ post.date | date_to_string }})</a>
+    [{{ post.date | date_to_string }}] <a href="{{ post.url }}">{{ post.title }}</a>
   </li>
+  {% capture excerpt %}{{ post.excerpt | strip  }}{% endcapture %}
+  {% if excerpt != "" %}
+  <p>{{ post.excerpt }}</p>
+  {% endif %}
   {% endfor %}
 </ul>
 

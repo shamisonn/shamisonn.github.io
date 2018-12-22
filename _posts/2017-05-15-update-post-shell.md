@@ -3,7 +3,7 @@ layout: default
 title: jekyll用のpost用のスクリプトのアプデ
 mode: post
 ---
-
+<!--readmore-->
 色々いじって色々変えた。
 
 特にファイル名を`makepost.sh`から`write.sh`に変えたのは大きい。(モチベ的に)

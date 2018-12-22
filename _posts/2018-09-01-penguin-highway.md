@@ -3,9 +3,7 @@ layout: default
 title: ペンギン・ハイウェイをみた。 
 mode: post
 ---
-
-Entered on [2018-09-01 Sat 10:42]
-
+<!--readmore-->
 すごく良かった。
 
 # 褒めパート

@@ -3,7 +3,7 @@ layout: default
 title: Chinese Trip.
 mode: post
 ---
-
+<!--readmore-->
 ※ 中国では英語縛りをしていたので英語で書くやつをする。
 
 
