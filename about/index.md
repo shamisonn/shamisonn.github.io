@@ -4,20 +4,24 @@ title: About me;
 mode: index
 ---
 
-I'm lazy Japanese.
-
-Name is shamison.
-
-## I'm interested in...
-
-- Programming.
-- Linux dist, Unix System.
-
-## I like to...
-
-- watch Anime Movies.
-- watch Esports Play videos. (most like LoL)
-- eat Ramen.
-- eat delicious foods.
-- talk with friends.
-
+```
+{
+  names: [
+    'shamison',
+    'しゃみそん',
+    'しゃみ',
+    'uetash',
+  ],
+  sex: '男'
+  job: 'バックエンドエンジニア',
+  likes: [
+    'ソフトウェアアーキテクチャ',
+    'BPM80から120ぐらいの曲',
+    '友達とゲームしたり話したりすること',
+    '美味しいご飯を食べること',
+    '人の変なこだわりを知ること',
+    '知らない概念を知ること',
+  ],
+  hate: '嘘'
+}
+```
